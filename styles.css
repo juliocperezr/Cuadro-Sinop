@@ -207,12 +207,12 @@ body{
     background:#fffdf8;
 }
 
-/* ===== RESPONSIVE PREMIUM ESCALADO ===== 
+/* ===== RESPONSIVE PREMIUM ESCALADO ===== */
 
 .wrapper-scale{
     transform-origin: top left;
     width: 100%;
-}*/
+}
 
 /* Pantallas medianas */
 @media (max-width: 1300px){
