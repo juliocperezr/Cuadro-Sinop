@@ -19,16 +19,16 @@ body{
     color:var(--texto);
     padding:24px;
     min-height:100vh;
+    height:auto;
     overflow-x:hidden;
-    
+    overflow-y:auto;
 }
 
 .app{
     max-width:1700px;
     margin:auto;
-    min-height:calc(100vh - 48px);
-    display:flex;
-    flex-direction:column;
+    width:100%;
+    height:auto;
 }
 
 /* HEADER */
@@ -76,7 +76,7 @@ body{
     grid-template-columns:260px 1fr;
     gap:35px;
     align-items:start;
-    flex:1;
+    height:auto;
 }
 
 /* RAÍZ */
@@ -177,7 +177,7 @@ body{
 }
 
 .children.open{
-    max-height:2000px;
+    max-height:5000px;
     opacity:1;
 }
 
