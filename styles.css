@@ -207,62 +207,70 @@ body{
     background:#fffdf8;
 }
 
-/* ===== RESPONSIVE PREMIUM ESCALADO ===== */
+/* ===== RESPONSIVE REAL ===== */
 
-.wrapper-scale{
-    transform-origin: top left;
-    width: 100%;
-}
-
-/* Pantallas medianas */
-@media (max-width: 1300px){
-
-    .wrapper-scale{
-        transform: scale(0.92);
-        width: 108%;
-    }
-
-    h2{
-        font-size:34px;
-    }
-}
-
-/* Tablets */
 @media (max-width: 1100px){
 
-    .wrapper-scale{
-        transform: scale(0.82);
-        width: 122%;
+    .tree-wrap{
+        grid-template-columns:1fr;
+        gap:24px;
     }
 
-    h2{
-        font-size:30px;
+    .root-card{
+        position:static;
+        font-size:24px;
+        max-width:320px;
+        margin:auto;
     }
-}
 
-/* Celulares grandes */
-@media (max-width: 900px){
-
-    .wrapper-scale{
-        transform: scale(0.72);
-        width: 138%;
+    .branches{
+        padding-left:20px;
     }
 }
 
-/* Celulares */
-@media (max-width: 700px){
+@media (max-width: 768px){
 
-    .wrapper-scale{
-        transform: scale(0.62);
-        width: 160%;
+    .hero h1{
+        font-size:clamp(1.5rem,5vw,2rem);
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .main-node{
+        font-size:18px;
+        padding:14px;
+    }
+
+    .children{
+        grid-template-columns:1fr;
+    }
+
+    .child{
+        font-size:14px;
+        padding:12px;
+    }
+
+    body{
+        padding:14px;
     }
 }
 
-/* Celulares pequeños */
-@media (max-width: 500px){
+@media (max-width: 480px){
 
-    .wrapper-scale{
-        transform: scale(0.52);
-        width: 192%;
+    .root-card{
+        font-size:20px;
+        padding:18px;
+    }
+
+    .main-node{
+        font-size:16px;
+    }
+
+    .hint{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
     }
 }
