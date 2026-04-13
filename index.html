@@ -1,0 +1,96 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cuadro Sinóptico</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div class="wrapper-scale">
+<div class="app">
+
+    <header class="hero">
+        <h1>Marco Normativo</h1>
+        
+
+        <div class="hint">
+            <div class="pulse-hand">👆</div>
+            <span>Haz clic en un ámbito para desplegar la información correspondiente</span>
+        </div>
+    </header>
+
+    <main class="tree-wrap">
+
+        <!-- Nodo raíz -->
+        <section class="root-node">
+            <div class="root-card">
+                Marco Normativo
+            </div>
+        </section>
+
+        <!-- Troncal + ramas -->
+        <section class="branches">
+
+            <!-- INTERNACIONAL -->
+            <article class="branch">
+                <button class="main-node" data-target="internacional">
+                    🌍 Ámbito Internacional
+                </button>
+
+                <div class="children" id="internacional">
+                    <div class="child">Convención Americana sobre Derechos Humanos</div>
+                    <div class="child">Convención sobre los Derechos del Niño</div>
+                    <div class="child">Convención de Belém do Pará</div>
+                    <div class="child">Convención sobre la Eliminación de todas las Formas de Discriminación contra la Mujer</div>
+                    <div class="child">Protección integral, interés superior de la niñez e igualdad sin discriminación.</div>
+                </div>
+            </article>
+
+            <!-- NACIONAL -->
+            <article class="branch">
+                <button class="main-node" data-target="nacional">
+                    🇲🇽 Ámbito Nacional
+                </button>
+
+                <div class="children" id="nacional">
+                    <div class="child">Constitución Política de los Estados Unidos Mexicanos</div>
+                    <div class="child">Ley General de Educación</div>
+                    <div class="child">Ley General de los Derechos de Niñas, Niños y Adolescentes</div>
+                    <div class="child">Ley General de Acceso de las Mujeres a una Vida Libre de Violencia</div>
+                    <div class="child">Ley General de Víctimas</div>
+                    <div class="child">Protocolo Facultativo sobre venta de niños y explotación</div>
+                    <div class="child">Ley Federal de los Trabajadores al Servicio del Estado</div>
+                    <div class="child">Plan Nacional de Desarrollo 2025-2030</div>
+                    <div class="child">Programa Sectorial de Educación 2025-2030</div>
+                    <div class="child">Promueve dignidad humana, cultura de paz, inclusión y prevención de violencia.</div>
+                </div>
+            </article>
+
+            <!-- LOCAL -->
+            <article class="branch">
+                <button class="main-node" data-target="local">
+                    📍 Ámbito Local
+                </button>
+
+                <div class="children" id="local">
+                    <div class="child">Constitución Política del Estado Libre y Soberano de Tlaxcala</div>
+                    <div class="child">Ley de Educación para el Estado de Tlaxcala</div>
+                    <div class="child">Código Penal para el Estado de Tlaxcala</div>
+                    <div class="child">Ley para prevenir y combatir la violencia escolar</div>
+                    <div class="child">Ley de igualdad sustantiva entre mujeres y hombres</div>
+                    <div class="child">Ley de Procuración e Impartición de Justicia para Adolescentes</div>
+                    <div class="child">Plan Anual de Trabajo 2025</div>
+                    <div class="child">Impulsa convivencia democrática, protección integral y atención oportuna.</div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

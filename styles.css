@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --vino:#661639;
+    --rosa:#9e294b;
+    --oro:#ceb585;
+    --gris:#f4f4f4;
+    --texto:#222;
+    --white:#fff;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#f8f8f8,#ececec);
+    color:var(--texto);
+    padding:24px;
+}
+
+.app{
+    max-width:1700px;
+    margin:auto;
+}
+
+/* HEADER */
+.hero{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    color:var(--vino);
+    font: size 1.2rem;;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#555;
+    font-size:18px;
+}
+
+.hint{
+    margin-top:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    padding:10px 16px;
+    border-radius:999px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.pulse-hand{
+    font-size:22px;
+    animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:translateY(0) scale(1);}
+    50%{transform:translateY(-4px) scale(1.15);}
+}
+
+/* ÁRBOL */
+.tree-wrap{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+/* RAÍZ */
+.root-card{
+    background:linear-gradient(135deg,var(--vino),var(--rosa));
+    color:#fff;
+    border-radius:18px;
+    padding:28px 18px;
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+    position:sticky;
+    top:20px;
+    box-shadow:0 12px 24px rgba(102,22,57,.25);
+}
+
+/* RAMAS */
+.branches{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    padding-left:35px;
+}
+
+.branches::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:linear-gradient(var(--vino),var(--rosa));
+    border-radius:10px;
+}
+
+.branch{
+    position:relative;
+    animation:fadeUp .6s ease both;
+}
+
+.branch:nth-child(2){animation-delay:.15s;}
+.branch:nth-child(3){animation-delay:.3s;}
+
+.branch::before{
+    content:"";
+    position:absolute;
+    left:-27px;
+    top:28px;
+    width:27px;
+    height:4px;
+    background:var(--vino);
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* NODO PRINCIPAL */
+.main-node{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    background:#fff;
+    color:var(--vino);
+    border-left:8px solid var(--oro);
+    padding:18px 20px;
+    border-radius:16px;
+    font-size:22px;
+    font-weight:bold;
+    text-align:left;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.main-node:hover{
+    transform:translateY(-2px);
+    background:#fff9ee;
+}
+
+.main-node.active{
+    background:linear-gradient(135deg,var(--vino),var(--rosa));
+    color:#fff;
+    border-left-color:#fff;
+}
+
+/* HIJOS */
+.children{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+    margin-top:16px;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height .55s ease, opacity .35s ease;
+}
+
+.children.open{
+    max-height:2000px;
+    opacity:1;
+}
+
+.child{
+    background:#fff;
+    border:1px solid #e6e6e6;
+    border-top:5px solid var(--oro);
+    border-radius:14px;
+    padding:14px;
+    line-height:1.45;
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+    transition:.25s;
+}
+
+.child:hover{
+    transform:translateY(-3px);
+    border-top-color:var(--rosa);
+    background:#fffdf8;
+}
+
+/* ===== RESPONSIVE PREMIUM ESCALADO ===== */
+
+.wrapper-scale{
+    transform-origin: top left;
+    width: 100%;
+}
+
+/* Pantallas medianas */
+@media (max-width: 1300px){
+
+    .wrapper-scale{
+        transform: scale(0.92);
+        width: 108%;
+    }
+
+    h2{
+        font-size:34px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1100px){
+
+    .wrapper-scale{
+        transform: scale(0.82);
+        width: 122%;
+    }
+
+    h2{
+        font-size:30px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 900px){
+
+    .wrapper-scale{
+        transform: scale(0.72);
+        width: 138%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 700px){
+
+    .wrapper-scale{
+        transform: scale(0.62);
+        width: 160%;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 500px){
+
+    .wrapper-scale{
+        transform: scale(0.52);
+        width: 192%;
+    }
+}
