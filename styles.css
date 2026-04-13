@@ -18,11 +18,17 @@ body{
     background:linear-gradient(135deg,#f8f8f8,#ececec);
     color:var(--texto);
     padding:24px;
+    min-height:100vh;
+    overflow-x:hidden;
+    
 }
 
 .app{
     max-width:1700px;
     margin:auto;
+    min-height:calc(100vh - 48px);
+    display:flex;
+    flex-direction:column;
 }
 
 /* HEADER */
@@ -33,7 +39,7 @@ body{
 
 .hero h1{
     color:var(--vino);
-    font: size 1.2rem;;
+    font: size 1.2rem;
     line-height:1.25;
     margin-bottom:10px;
 }
@@ -70,6 +76,7 @@ body{
     grid-template-columns:260px 1fr;
     gap:35px;
     align-items:start;
+    flex:1;
 }
 
 /* RAÍZ */
